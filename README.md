@@ -2,7 +2,7 @@
 
 Browse at <https://til.adamsmith.as/> · [Atom feed](https://til.adamsmith.as/feed.atom)
 
-<!-- count starts -->1<!-- count ends --> TILs so far.
+<!-- count starts -->2<!-- count ends --> TILs so far.
 
 ## How this works
 
@@ -19,8 +19,13 @@ Inspired by [simonw/til](https://github.com/simonw/til).
 - **Dense with real links.** Every tool, spec, library, or concept mentioned should link to its actual home on the web. Links are verified, not assumed.
 - **Plain blockquotes** for callouts and meta-commentary. No `[!NOTE]` syntax.
 - **Topic as directory.** A short noun: `python`, `git`, `macos`, `llms`. Created implicitly by adding a file.
+- **First person, not second.** Use `I` for my own judgment calls and opinions, `we` for work an agent and I did together (the transagentic author), and reserve `you` for direct instructions to the reader. Avoid the lecturing second-person default.
 
 <!-- index starts -->
+## llms
+
+- [Visual perception testing for VLMs](https://github.com/rndmcnlly/til/blob/main/llms/visual-perception-testing.md) - 2026-04-21
+
 ## python
 
 - [The `uv run --script` pattern](https://github.com/rndmcnlly/til/blob/main/python/uv-run-script-pattern.md) - 2026-04-21
