@@ -21,26 +21,38 @@ BASE_URL = "https://til.adamsmith.as"
 AUTHOR = "Adam Smith"
 REPO = "rndmcnlly/til"
 
-md = mistune.create_markdown(
-    plugins=["table", "fenced_code", "footnotes", "strikethrough"]
-)
+from mistune.plugins.table import table as table_plugin
+from mistune.plugins.footnotes import footnotes as footnotes_plugin
+
+md = mistune.create_markdown(plugins=[table_plugin, footnotes_plugin])
 
 
-def git_file_times(filepath):
+def git_all_file_times():
     result = subprocess.run(
-        ["git", "log", "--follow", "--format=%cI", "--", filepath],
+        ["git", "log", "--name-only", "--format=%cI"],
         capture_output=True,
         text=True,
     )
-    dates = result.stdout.strip().split("\n")
-    if not dates or dates[0] == "":
-        return None, None
-    updated = datetime.fromisoformat(dates[0])
-    created = datetime.fromisoformat(dates[-1])
-    return created, updated
+    file_dates = {}
+    current_date = None
+    for line in result.stdout.split("\n"):
+        line = line.strip()
+        if not line:
+            continue
+        try:
+            current_date = datetime.fromisoformat(line)
+        except ValueError:
+            if current_date and line.endswith(".md"):
+                existing = file_dates.get(line)
+                if existing is None:
+                    file_dates[line] = (current_date, current_date)
+                else:
+                    file_dates[line] = (existing[0], current_date)
+    return file_dates
 
 
 def collect_tils():
+    file_times = git_all_file_times()
     tils = []
     for filepath in sorted(ROOT.glob("*/*.md")):
         path = str(filepath.relative_to(ROOT))
@@ -49,7 +61,7 @@ def collect_tils():
         lines = filepath.read_text().split("\n")
         title = lines[0].lstrip("#").strip()
         body = "\n".join(lines[1:]).strip()
-        created, updated = git_file_times(path)
+        created, updated = file_times.get(path, (None, None))
         tils.append(
             {
                 "path": path,
