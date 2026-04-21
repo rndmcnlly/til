@@ -1,6 +1,8 @@
 # The `uv run --script` pattern
 
-`uv run --script` lets you run a Python script that declares its own dependencies inline using PEP 723 metadata. No virtualenv, no `pip install`, no `requirements.txt`.
+> I didn't actually just learn this today. I'm just using this post to test my TIL publishing workflow.
+
+`uv run --script` lets you run a Python script that declares its own dependencies inline using [PEP 723](https://peps.python.org/pep-0723/) metadata. No virtualenv, no `pip install`, no `requirements.txt`.
 
 ```python
 # /// script
