@@ -35,6 +35,6 @@ Inspired by [simonw/til](https://github.com/simonw/til).
 ## python
 
 - [The `uv run --script` pattern](https://github.com/rndmcnlly/til/blob/main/python/uv-run-script-pattern.md) - 2026-04-21
-- [`agentnb` gives coding agents a persistent Python REPL through bash](https://github.com/rndmcnlly/til/blob/main/python/agentnb-persistent-repl-for-agents.md) - 2026-04-23
+- [`agentnb` gives coding agents a persistent Python REPL through bash](https://github.com/rndmcnlly/til/blob/main/python/agentnb-persistent-repl-for-agents.md) - 2026-04-22
 
 <!-- index ends -->
