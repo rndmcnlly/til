@@ -2,7 +2,7 @@
 
 Browse at <https://til.adamsmith.as/> · [Atom feed](https://til.adamsmith.as/feed.atom)
 
-<!-- count starts -->5<!-- count ends --> TILs so far.
+<!-- count starts -->6<!-- count ends --> TILs so far.
 
 ## How this works
 
@@ -35,5 +35,6 @@ Inspired by [simonw/til](https://github.com/simonw/til).
 ## python
 
 - [The `uv run --script` pattern](https://github.com/rndmcnlly/til/blob/main/python/uv-run-script-pattern.md) - 2026-04-21
+- [`agentnb` gives coding agents a persistent Python REPL through bash](https://github.com/rndmcnlly/til/blob/main/python/agentnb-persistent-repl-for-agents.md) - 2026-04-23
 
 <!-- index ends -->
