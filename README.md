@@ -2,7 +2,7 @@
 
 Browse at <https://til.adamsmith.as/> · [Atom feed](https://til.adamsmith.as/feed.atom)
 
-<!-- count starts -->6<!-- count ends --> TILs so far.
+<!-- count starts -->7<!-- count ends --> TILs so far.
 
 ## How this works
 
@@ -16,6 +16,7 @@ Inspired by [simonw/til](https://github.com/simonw/til).
 - [Visual perception testing for VLMs](https://github.com/rndmcnlly/til/blob/main/llms/visual-perception-testing.md) - 2026-04-21
 - [Local Parakeet beats hosted for interview-length ASR](https://github.com/rndmcnlly/til/blob/main/llms/local-parakeet-beats-hosted-asr.md) - 2026-04-21
 - [A one-shot probe for thinking preservation across turns](https://github.com/rndmcnlly/til/blob/main/llms/testing-thinking-preservation.md) - 2026-04-21
+- [Giving a text-only agent eyes via a cheap vision subagent](https://github.com/rndmcnlly/til/blob/main/llms/vision-by-subagent-delegation.md) - 2026-04-25
 
 ## macos
 
